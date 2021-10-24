@@ -1,0 +1,92 @@
+
+
+{% extends 'layout.html' %} {% block body %}
+<html>
+  <head>
+    <style>
+      body {
+            background-image: radial-gradien(black,white);
+
+            background-size: cover;
+            height: 100%;
+
+          }
+
+      h1 {
+          color: maroon;
+          margin-left: 40px;
+        }
+    </style>
+  </head>
+
+<body>
+
+  <h3 class='jumbotron' > Welcome : {{session.username}}</h3>
+   
+    <div>
+        <h5>Here are the available buses</h5>
+    </div>
+    <table>
+    <tr><th>  BUS_ID&nbsp;</th>
+        <th>  Source&nbsp;</th> 
+        <th>  Destination&nbsp;</th>
+        <th>  Date&nbsp;</th>
+    </tr>
+
+    {% for row in result %}<br>
+    <tr>
+    <td>  {{row[3]}}&nbsp;</td>
+    <td>  {{row[0]}}&nbsp;</td>
+    <td>  {{row[1]}}&nbsp; </td>
+    <td>  {{row[2]}}&nbsp;</td>
+    <td> <button><a href="bus_available">Select The Bus</a></button></td>
+    </tr>
+    {% endfor %}
+
+    
+    
+    
+   
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+  <!-- <div class='row mt-5'>
+    <div class='col-4 mx-auto'>
+
+      <form action="{{url_for('home')}}" method='post'>
+        <div class='form-group'>
+          <label>Source</label>
+          <input type='text' name='source' required class='form-control'>  
+        </div>
+        <div class='form-group'>
+          <label>Destination</label>
+          <input type='text' name='destination' required class='form-control'>  
+        </div>
+        <div class='form-group'>
+          <label>Date</label>
+          <input type='date' name='date' required class='form-control'>  
+        </div>
+        <a href="bus_available">
+
+        <input type='submit' name='submit' value='Search' class='btn btn-success'>
+
+        </a>>
+      </form>
+
+    </div>
+
+  </div>
+ -->
+
+
+
+
+{% endblock %}

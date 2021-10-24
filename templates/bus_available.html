@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+{% block body %}
+<html>
+    <head><style>
+        body{
+          background-image: radial-gradient(black,white);
+        }
+
+    </style></head>
+    <body>
+
+
+        <!-- <p>BUS_ID Source   Destination   Date </p> -->
+
+        {% for bus in result %}<br/>
+        <table>
+            <tr>
+                <th>Bus Id  &nbsp;</th>
+                <th>Bus Type    &nbsp;</th>
+                <th>Bus No  &nbsp;</th>
+                <th>Available   &nbsp;</th>
+                <th>Start Time  &nbsp;</th>
+                <th>End Time    &nbsp;</th>
+                <th>Rest Stops  &nbsp;</th>
+                <th>Rating  &nbsp;</th>
+                <th>Cost    &nbsp;</th>
+            </tr>
+            <tr>
+                <td>{{bus[0]}}  &nbsp;</td>
+                <td>{{bus[1]}}  &nbsp;</td>
+                <td>{{bus[2]}}  &nbsp;</td>
+                <td>{{bus[3]}}  &nbsp;</td>
+                <td>{{bus[4]}}  &nbsp;</td>
+                <td>{{bus[5]}}  &nbsp;</td>
+                <td>{{bus[6]}}  &nbsp;</td>
+                <td>{{bus[7]}}  &nbsp;</td>
+                <td> <button><a href="reg_details">Select The Bus</a></button></td>
+
+            </tr>
+        <!-- <p>{{bus[0]}}  {{bus[1]}}  {{bus[2]}}  {{bus[3]}} {{bus[4]}}   {{bus[5]}}  {{bus[6]}}  {{bus[7]}} <a href = "reg_details">click</a></p>
+        {% endfor %} -->
+
+    </body>
+</html>
+{% endblock %} 
+
+
+
