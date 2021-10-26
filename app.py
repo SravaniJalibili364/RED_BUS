@@ -136,6 +136,19 @@ def logout():
 	session.clear()
 	flash('You are now logged out','success')
 	return redirect(url_for('login'))
+
+
+
+#caching-time for the application
+@app.after_request
+def add_header(response):
+
+    response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+    response.headers['Cache-Control']   = 'public,max-age = 30'
+
+    return response
+
+
     
 if __name__=='__main__':
     app.secret_key='secret123'
