@@ -3,6 +3,7 @@ from flask import Flask,render_template,request,redirect,session,flash,url_for
 from functools import wraps
 from flask_mysqldb import MySQL
 import mysql.connector as db
+from flask_caching import Cache
 
 
 app=Flask(__name__)
