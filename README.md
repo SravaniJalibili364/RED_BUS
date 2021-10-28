@@ -43,7 +43,8 @@ mydb = db.connect(
  )
 
 
-      Flask is an API of Python that allows us to build up web-applications.We have to connect your Flask app to an existing MYSQL database. Connecting will require your own database username and database password. 
+      Flask is an API of Python that allows us to build up web-applications.We have to connect your Flask app to an existing MYSQL database. 
+  Connecting will require your own database username and database password. 
 
 app=Flask(__name__)
 app.config['MYSQL_HOST']='localhost'
