@@ -27,12 +27,31 @@ Software Requirements of the project :
 7.import mysql.connector as db
 8.from flask_caching import Cache
 
+      The above softwares,frameworks,databases,packages that are the required for this project to run this project.
+
+Project Execution:
+
+For this project , In the visual studio first we need to import mysql connector from mysql module and also we have to import datetime module,
+flask frmaework,cache.
+
+      A connection with the MySQL server can be established using either the mysql.connector.connect() method.
+mydb = db.connect(
+   host="localhost",
+   user="root",
+   db = "RED_BUS",
+   password = "Sravani@364"
+ )
 
 
+      Flask is an API of Python that allows us to build up web-applications.We have to connect your Flask app to an existing MYSQL database. Connecting will require your own database username and database password. 
 
-
-
-
+app=Flask(__name__)
+app.config['MYSQL_HOST']='localhost'
+app.config['MYSQL_USER']='root'
+app.config['MYSQL_PASSWORD']='Sravani@364'
+app.config['MYSQL_DB']='RED_BUS'
+app.config['MYSQL_CURSORCLASS']='DictCursor'
+mysql=MySQL(app)
 
 
 
